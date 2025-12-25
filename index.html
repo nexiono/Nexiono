@@ -1,13 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>NEXIONO</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexiono | 24/7 Cyber Security Monitoring & Protection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background: #0a192f; color: #e2e8f0; font-family: 'Roboto', sans-serif; }
+        .navbar { background: #001e3c; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('assets/images/hero-bg.jpg'); background-size: cover; height: 100vh; display: flex; align-items: center; }
+        .urgent-bar { background: #dc2626; color: white; text-align: center; padding: 10px; font-weight: bold; }
+        .service-section { background: #001e3c; padding: 80px 0; }
+        .stat-card { background: #1e3a8a; padding: 30px; border-radius: 15px; text-align: center; }
+        .why-card { background: #1e293b; padding: 20px; border-radius: 10px; }
+        footer { background: #020617; padding: 50px 0; }
+    </style>
 </head>
-<body style="font-family:Arial; text-align:center; margin-top:80px;">
-  <h1>NEXIONO</h1>
-  <p>Next-Generation Digital Innovation</p>
-  <p>Website coming soon…</p>
+<body>
+
+    <!-- Urgent Help Bar -->
+    <div class="urgent-bar">
+        Need urgent help with a breach? Call our team 24/7: +92-XXX-XXXXXXX
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><img src="assets/images/logo.png" alt="Nexiono Logo" height="40"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li><a class="nav-link btn btn-primary text-white px-4" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero text-center text-white">
+        <div class="container">
+            <h1 class="display-3 fw-bold">24/7 Cyber Security Monitoring & Management</h1>
+            <p class="lead fs-2">Proactively defend your business from evolving threats</p>
+            <a href="contact.html" class="btn btn-primary btn-lg mt-4">Get Protected Now</a>
+        </div>
+    </section>
+
+    <!-- Services Overview (Like CloudTech24) -->
+    <section class="service-section">
+        <div class="container">
+            <h2 class="text-center mb-5">24/7 Managed Cyber Security Services</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white border-0">
+                        <div class="card-body">
+                            <i class="fas fa-shield-alt fa-3x mb-3 text-primary"></i>
+                            <h5>Managed Detection & Response</h5>
+                            <ul>
+                                <li>Real-time threat hunting</li>
+                                <li>Incident response 24/7</li>
+                                <li>Advanced endpoint protection</li>
+                            </ul>
+                            <a href="services.html#mdr" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more services similarly -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Nexiono -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose Nexiono?</h2>
+            <div class="row">
+                <div class="col-md-4"><div class="why-card"><strong>250+</strong> Clients Protected Globally</div></div>
+                <div class="col-md-4"><div class="why-card"><strong>24/7/365</strong> Monitoring & Support</div></div>
+                <div class="col-md-4"><div class="why-card"><strong>Award-Winning</strong> Cyber Security Provider</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="stat-card">
+                        <h3>287 Days</h3>
+                        <p>Average time to detect and contain a breach (industry stat)</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="stat-card">
+                        <h3>99.9% Uptime</h3>
+                        <p>Guaranteed protection for your business</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 Nexiono Cyber Security. All Rights Reserved.</p>
+            <p>Email: info@nexiono.com | Global 24/7 Support</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
