@@ -1,25 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="manifest" href="/assets/manifest.json">
-  </head>
-  <body>
-    <header>
-      <h1>About Us</h1>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Nexiono - a leading 24/7 managed cyber security provider dedicated to protecting businesses from evolving digital threats with expert monitoring and rapid response.">
+    <title>About Us | Nexiono - 24/7 Cyber Security Experts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+    <style>
+        body { background: #0a192f; color: #e2e8f0; font-family: 'Roboto', sans-serif; }
+        .navbar { background: rgba(10, 25, 47, 0.95); backdrop-filter: blur(10px); }
+        .hero { background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('assets/images/about-hero.jpg'); background-size: cover; background-position: center; height: 70vh; display: flex; align-items: center; }
+        .urgent-bar { background: #dc2626; color: white; text-align: center; padding: 12px; font-weight: bold; font-size: 1.1rem; }
+        .section { padding: 100px 0; }
+        .section-alt { background: #001e3c; }
+        .team-card { background: #1e293b; border-radius: 15px; overflow: hidden; transition: transform 0.3s; }
+        .team-card:hover { transform: translateY(-10px); }
+        .value-icon { font-size: 3rem; color: #3b82f6; margin-bottom: 20px; }
+        footer { background: #020617; padding: 60px 0 30px; }
+    </style>
+</head>
+<body>
 
-    <main>
-      <p>Information about the project.</p>
-    </main>
+    <!-- Urgent Help Bar -->
+    <div class="urgent-bar">
+        <i class="fas fa-exclamation-triangle"></i> Experiencing a security incident? Our 24/7 team is ready to help: +92-300-XXXXXXX
+    </div>
 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.svg" alt="Nexiono Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary px-4 py-2 ms-3" href="contact.html">Get Protected</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-white">
+        <div class="container">
+            <h1 class="display-2 fw-bold mb-4">About Nexiono</h1>
+            <p class="lead fs-3">Next-Generation Cyber Security Built on Trust, Expertise, and Innovation</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">Our Story</h2>
+                    <p class="lead">Nexiono was founded in 2023 by a team of seasoned cyber security professionals who saw a growing gap in the market: small and medium-sized businesses were increasingly targeted by sophisticated cyber attacks, yet lacked access to affordable, enterprise-grade protection.</p>
+                    <p>We believed that every organization — regardless of size — deserves the same level of security that Fortune 500 companies enjoy. Too many providers offered either basic antivirus solutions or overly complex (and expensive) services that overwhelmed smaller teams.</p>
+                    <p>That's why we built Nexiono from the ground up as a fully managed 24/7 cyber security service, combining cutting-edge technology with human expertise. Our Security Operations Centre (SOC) monitors client environments around the clock, proactively hunting threats and responding within minutes — not hours or days.</p>
+                    <p>Today, we protect over 250 organizations across multiple industries, from finance and healthcare to retail and professional services. Our mission remains unchanged: to make world-class cyber security simple, effective, and accessible.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="fas fa-shield-alt fa-10x text-primary opacity-30"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">Our Mission & Core Values</h2>
+            <div class="row g-5 text-center">
+                <div class="col-md-4">
+                    <div class="value-icon"><i class="fas fa-bullseye"></i></div>
+                    <h4>Proactive Protection</h4>
+                    <p>We don't wait for breaches to happen. Our team actively hunts threats and strengthens defenses before attackers can exploit weaknesses.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-icon"><i class="fas fa-users"></i></div>
+                    <h4>Client-First Approach</h4>
+                    <p>Every decision we make puts our clients first. Transparent communication, clear reporting, and tailored solutions are at the heart of everything we do.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h4>Continuous Expertise</h4>
+                    <p>Cyber threats evolve daily. So do we. Our analysts hold industry-leading certifications and undergo ongoing training to stay ahead of attackers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">Leadership Team</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="team-card text-white">
+                        <img src="assets/images/team1.jpg" class="w-100" alt="CEO" style="height: 300px; object-fit: cover;">
+                        <div class="p-4">
+                            <h5 class="fw-bold">Ahmed Khan</h5>
+                            <p class="text-primary">Founder & CEO</p>
+                            <p>15+ years in cyber security. Former Head of Security at a major financial institution. CISSP, CISM certified.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card text-white">
+                        <img src="assets/images/team2.jpg" class="w-100" alt="CTO" style="height: 300px; object-fit: cover;">
+                        <div class="p-4">
+                            <h5 class="fw-bold">Sarah Malik</h5>
+                            <p class="text-primary">Chief Technology Officer</p>
+                            <p>Expert in threat intelligence and EDR platforms. Previously led security operations for global enterprises.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card text-white">
+                        <img src="assets/images/team3.jpg" class="w-100" alt="Head of Operations" style="height: 300px; object-fit: cover;">
+                        <div class="p-4">
+                            <h5 class="fw-bold">Omar Raza</h5>
+                            <p class="text-primary">Head of Security Operations</p>
+                            <p>Manages our 24/7 SOC. Veteran incident responder with experience handling major breaches.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-alt text-center">
+        <div class="container">
+            <h2 class="display-4 fw-bold mb-4">Ready to Work With Us?</h2>
+            <p class="lead mb-5">Join hundreds of businesses that trust Nexiono for their cyber security.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-      <p>&copy; Nexiono</p>
+        <div class="container text-center">
+            <img src="assets/images/logo.svg" alt="Nexiono" height="60" class="mb-3">
+            <p class="mb-2">© 2025 Nexiono Cyber Security. All Rights Reserved.</p>
+            <p>info@nexiono.com | 24/7 Emergency Support Available</p>
+        </div>
     </footer>
 
-    <script src="/assets/js/app.js" defer></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
