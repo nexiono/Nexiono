@@ -1,25 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="manifest" href="/assets/manifest.json">
-  </head>
-  <body>
-    <header>
-      <h1>Contact Us</h1>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Nexiono for 24/7 cyber security support, free consultation, or emergency incident response. Get in touch today.">
+    <title>Contact Us | Nexiono - 24/7 Cyber Security Support</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+    <style>
+        body { background: #0a192f; color: #e2e8f0; font-family: 'Roboto', sans-serif; }
+        .navbar { background: rgba(10, 25, 47, 0.95); backdrop-filter: blur(10px); }
+        .hero { background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('assets/images/contact-hero.jpg'); background-size: cover; height: 70vh; display: flex; align-items: center; }
+        .urgent-bar { background: #dc2626; color: white; text-align: center; padding: 12px; font-weight: bold; font-size: 1.1rem; }
+        .section { padding: 100px 0; }
+        .section-alt { background: #001e3c; }
+        .contact-card { background: #1e293b; padding: 40px; border-radius: 15px; }
+        .form-control { background: #0f172a; border: none; color: #e2e8f0; }
+        .form-control:focus { background: #1e293b; box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.5); }
+        footer { background: #020617; padding: 60px 0 30px; }
+    </style>
+</head>
+<body>
 
-    <main>
-      <p>Contact details and form.</p>
-    </main>
+    <!-- Urgent Help Bar -->
+    <div class="urgent-bar">
+        <i class="fas fa-phone-alt"></i> Emergency security incident? Call 24/7: +92-300-XXXXXXX
+    </div>
 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.svg" alt="Nexiono Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold btn btn-primary px-4 py-2 ms-3" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-white">
+        <div class="container">
+            <h1 class="display-2 fw-bold mb-4">Get In Touch</h1>
+            <p class="lead fs-3">We're here to help 24/7 – contact us for consultation or emergency support</p>
+        </div>
+    </section>
+
+    <!-- Contact Form & Details -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <div class="contact-card">
+                        <h3 class="fw-bold mb-4">Send Us a Message</h3>
+                        <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace with your Formspree/Netlify endpoint -->
+                            <div class="mb-3">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" name="_replyto" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
+                            </div>
+                            <div class="mb-3">
+                                <textarea name="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-6">
+                    <div class="contact-card h-100">
+                        <h3 class="fw-bold mb-4">Contact Information</h3>
+                        <img src="assets/images/soc-room.jpg" class="img-fluid rounded mb-4" alt="Nexiono SOC">
+                        <ul class="list-unstyled fs-5">
+                            <li class="mb-3"><i class="fas fa-envelope text-primary me-3"></i> info@nexiono.com</li>
+                            <li class="mb-3"><i class="fas fa-phone text-primary me-3"></i> +92-300-XXXXXXX (24/7)</li>
+                            <li class="mb-3"><i class="fas fa-headset text-primary me-3"></i> Emergency Line: Same number</li>
+                            <li class="mb-3"><i class="fas fa-location-dot text-primary me-3"></i> Lahore, Pakistan (Global Operations)</li>
+                        </ul>
+                        <p class="mt-4">Our team is standing by 24/7 to respond to inquiries and incidents.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps -->
+    <section class="section">
+        <div class="container">
+            <h3 class="text-center fw-bold mb-4">Our Location</h3>
+            <div class="ratio ratio-21x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.456789012345!2d74.31234567890123!3d31.52037004567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919045678901234%3A0xabcde1234567890!2sLahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1735700000000" width="100%" height="450" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-      <p>&copy; Nexiono</p>
+        <div class="container text-center">
+            <img src="assets/images/logo.svg" alt="Nexiono" height="60" class="mb-3">
+            <p class="mb-2">© 2025 Nexiono Cyber Security. All Rights Reserved.</p>
+            <p>info@nexiono.com | 24/7 Emergency Support</p>
+        </div>
     </footer>
 
-    <script src="/assets/js/app.js" defer></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
