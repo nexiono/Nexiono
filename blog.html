@@ -11,12 +11,12 @@
     <style>
         body { background: #0a192f; color: #e2e8f0; font-family: 'Roboto', sans-serif; }
         .navbar { background: rgba(10, 25, 47, 0.95); backdrop-filter: blur(10px); }
-        .hero { background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('assets/images/blog-hero.jpg'); background-size: cover; height: 60vh; display: flex; align-items: center; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); background-size: cover; height: 60vh; display: flex; align-items: center; }
         .urgent-bar { background: #dc2626; color: white; text-align: center; padding: 12px; font-weight: bold; font-size: 1.1rem; }
         .section { padding: 100px 0; }
         .blog-card { background: #001e3c; border-radius: 15px; overflow: hidden; transition: transform 0.3s; }
         .blog-card:hover { transform: translateY(-10px); }
-        .blog-card img { height: 250px; object-fit: cover; }
+        .blog-card img { height: 250px; object-fit: cover; width: 100%; }
         .sidebar-card { background: #001e3c; padding: 30px; border-radius: 15px; }
         footer { background: #020617; padding: 60px 0 30px; }
     </style>
@@ -49,7 +49,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Background image added) -->
     <section class="hero text-center text-white">
         <div class="container">
             <h1 class="display-2 fw-bold mb-4">Nexiono Blog</h1>
@@ -64,10 +64,10 @@
                 <!-- Main Blog Posts -->
                 <div class="col-lg-8">
                     <div class="row g-4">
-                        <!-- Post 1 -->
+                        <!-- Post 1: AI-Powered Ransomware -->
                         <div class="col-12">
                             <div class="blog-card text-white">
-                                <img src="assets/images/blog1.jpg" class="w-100" alt="Rising Ransomware Threats in 2025">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="AI-Powered Ransomware Threat">
                                 <div class="p-4">
                                     <small class="text-primary">December 20, 2025</small>
                                     <h3 class="fw-bold mt-2">The Rising Threat of AI-Powered Ransomware in 2025</h3>
@@ -77,10 +77,10 @@
                             </div>
                         </div>
 
-                        <!-- Post 2 -->
+                        <!-- Post 2: Phishing Evolution -->
                         <div class="col-12">
                             <div class="blog-card text-white">
-                                <img src="assets/images/blog2.jpg" class="w-100" alt="Phishing Attacks Evolution">
+                                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Phishing Attacks Evolution">
                                 <div class="p-4">
                                     <small class="text-primary">December 15, 2025</small>
                                     <h3 class="fw-bold mt-2">How Phishing Attacks Are Evolving – And How to Stay Safe</h3>
@@ -90,10 +90,10 @@
                             </div>
                         </div>
 
-                        <!-- Post 3 -->
+                        <!-- Post 3: Zero Trust -->
                         <div class="col-12">
                             <div class="blog-card text-white">
-                                <img src="assets/images/blog3.jpg" class="w-100" alt="Zero Trust Security">
+                                <img src="https://images.unsplash.com/photo-1558494949-ef910a483faa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Zero Trust Security Architecture">
                                 <div class="p-4">
                                     <small class="text-primary">December 10, 2025</small>
                                     <h3 class="fw-bold mt-2">Implementing Zero Trust: A Practical Guide for 2025</h3>
@@ -103,10 +103,10 @@
                             </div>
                         </div>
 
-                        <!-- Post 4 -->
+                        <!-- Post 4: Incident Response -->
                         <div class="col-12">
                             <div class="blog-card text-white">
-                                <img src="assets/images/blog4.jpg" class="w-100" alt="Incident Response Best Practices">
+                                <img src="https://images.unsplash.com/photo-1581093450021-4a66cb3a6a6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Cyber Security Incident Response">
                                 <div class="p-4">
                                     <small class="text-primary">December 5, 2025</small>
                                     <h3 class="fw-bold mt-2">Incident Response: Reducing Recovery Time by 80%</h3>
@@ -118,7 +118,7 @@
                     </div>
                 </div>
 
-                <!-- Sidebar -->
+                <!-- Sidebar (unchanged) -->
                 <div class="col-lg-4">
                     <div class="sidebar-card">
                         <h4 class="fw-bold mb-4">Categories</h4>
