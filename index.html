@@ -15,8 +15,13 @@
         body { background: #0a192f; color: #e2e8f0; font-family: 'Roboto', sans-serif; line-height: 1.7; }
         .navbar { background: rgba(10, 25, 47, 0.95); backdrop-filter: blur(10px); transition: all 0.3s; }
         .navbar.scrolled { background: rgba(10, 25, 47, 0.98); }
-        .hero { background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('assets/images/hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; }
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                        url('https://www.shutterstock.com/image-photo/cybersecurity-background-navy-blue-modern-600nw-2627410633.jpg') center/cover no-repeat; 
+            min-height: 100vh; display: flex; align-items: center; 
+        }
         .urgent-bar { background: #dc2626; color: white; text-align: center; padding: 12px; font-weight: bold; font-size: 1.1rem; }
+        .urgent-bar a { color: white; text-decoration: underline; }
         .section-dark { background: #001e3c; padding: 100px 0; }
         .section-light { background: #0f172a; padding: 100px 0; }
         .stat-card { background: #1e3a8a; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.3s; }
@@ -24,6 +29,8 @@
         .why-card { background: #1e293b; padding: 35px; border-radius: 15px; height: 100%; transition: all 0.3s; border: 1px solid transparent; }
         .why-card:hover { transform: translateY(-10px); border-color: #3b82f6; }
         .testimonial-card { background: #1e293b; padding: 40px; border-radius: 15px; border-left: 6px solid #3b82f6; max-width: 900px; margin: 0 auto; }
+        .service-img { height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+        .intro-img { border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
         .contact-cta { background: linear-gradient(135deg, #1e3a8a, #3b82f6); padding: 100px 0; }
         footer { background: #020617; padding: 70px 0 30px; }
         .nav-link.btn { border-radius: 50px; font-weight: 500; }
@@ -31,6 +38,7 @@
             .hero h1 { font-size: 2.5rem; }
             .hero .lead { font-size: 1.3rem; }
             .section-dark, .section-light { padding: 80px 0; }
+            .service-img { height: 150px; }
         }
     </style>
 </head>
@@ -38,7 +46,8 @@
 
     <!-- Urgent Help Bar -->
     <div class="urgent-bar">
-        <i class="fas fa-exclamation-triangle"></i> Experiencing a security breach or suspicious activity? Call our 24/7 emergency team now: +92-300-XXXXXXX
+        <i class="fas fa-exclamation-triangle"></i> Experiencing a security breach or suspicious activity? Call our 24/7 emergency team now: 
+        <a href="tel:+923493127225">+92-349-3127225</a>
     </div>
 
     <!-- Navbar -->
@@ -86,7 +95,7 @@
                     <p>From financial institutions and healthcare providers to e-commerce platforms and legal firms, we've helped hundreds of organizations strengthen their defenses and achieve compliance with standards like ISO 27001, GDPR, and PCI DSS.</p>
                 </div>
                 <div class="col-lg-6 text-center mb-5 mb-lg-0">
-                    <i class="fas fa-shield-alt fa-10x text-primary opacity-50"></i>
+                    <img src="https://www.obrela.com/wp-content/uploads/2024/07/What-is-a-SOC-in-cyber-security.jpg" alt="Security Operations Center Team Monitoring" class="img-fluid intro-img">
                 </div>
             </div>
         </div>
@@ -99,8 +108,8 @@
             <div class="row g-5">
                 <div class="col-md-4">
                     <div class="card bg-dark text-white border-0 h-100 shadow-lg">
+                        <img src="https://i0.wp.com/faisalyahya.com/wp-content/uploads/2024/08/b1d3a238-2ef8-42c8-9d0c-715da359157b.jpg?fit=1200%2C669&quality=89&ssl=1" alt="Managed Detection & Response" class="service-img w-100">
                         <div class="card-body p-5 text-center">
-                            <i class="fas fa-search-dollar fa-4x mb-4 text-primary"></i>
                             <h5 class="fw-bold fs-4">Managed Detection & Response (MDR)</h5>
                             <p>Continuous threat hunting, endpoint monitoring, and instant incident response using next-gen EDR/XDR tools backed by expert analysts.</p>
                         </div>
@@ -108,8 +117,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card bg-dark text-white border-0 h-100 shadow-lg">
+                        <img src="https://cdn.sanity.io/images/a3jopls3/testdataset/e8fd87d233864a70f0bd206a5132f7cc67b12baa-1536x1024.jpg" alt="Penetration Testing & Vulnerability Management" class="service-img w-100">
                         <div class="card-body p-5 text-center">
-                            <i class="fas fa-vial fa-4x mb-4 text-primary"></i>
                             <h5 class="fw-bold fs-4">Penetration Testing & Vulnerability Management</h5>
                             <p>Ethical hacking simulations, detailed vulnerability assessments, and ongoing scanning with prioritized remediation roadmaps.</p>
                         </div>
@@ -117,8 +126,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card bg-dark text-white border-0 h-100 shadow-lg">
+                        <img src="https://blog.usecure.io/hs-fs/hubfs/7%20Key%20Steps%20to%20implement%20security%20awareness%20training_3.png?width=2280&name=7%20Key%20Steps%20to%20implement%20security%20awareness%20training_3.png" alt="Security Awareness Training" class="service-img w-100">
                         <div class="card-body p-5 text-center">
-                            <i class="fas fa-user-shield fa-4x mb-4 text-primary"></i>
                             <h5 class="fw-bold fs-4">Security Awareness Training & Phishing Simulation</h5>
                             <p>Interactive employee training programs and realistic phishing tests to build a human firewall within your organization.</p>
                         </div>
@@ -171,9 +180,16 @@
     <!-- Testimonial -->
     <section class="section-light">
         <div class="container">
-            <div class="testimonial-card">
-                <p class="fs-4 fst-italic">"Since partnering with Nexiono, we've had complete peace of mind knowing our systems are monitored around the clock. Their team detected and stopped a sophisticated ransomware attack within minutes — preventing what could have been a catastrophic breach costing millions. Professional, responsive, and truly expert. Highly recommended for any business serious about security."</p>
-                <p class="text-end fw-bold mt-4 mb-0">— CEO, Leading Financial Services Firm</p>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="testimonial-card">
+                        <p class="fs-4 fst-italic">"Since partnering with Nexiono, we've had complete peace of mind knowing our systems are monitored around the clock. Their team detected and stopped a sophisticated ransomware attack within minutes — preventing what could have been a catastrophic breach costing millions. Professional, responsive, and truly expert. Highly recommended for any business serious about security."</p>
+                        <p class="text-end fw-bold mt-4 mb-0">— CEO, Leading Financial Services Firm</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/bltb898a7a2ab040cd5/64f17597e68ad322f75ab3a2/Cybersecurity_NicoElNino_Alamy.jpg?width=1280&auto=webp&quality=80&disable=upscale" alt="Client Success in Cyber Security" class="img-fluid rounded shadow">
+                </div>
             </div>
         </div>
     </section>
@@ -184,7 +200,7 @@
             <h2 class="display-4 fw-bold mb-4">Ready to Secure Your Business?</h2>
             <p class="lead fs-3 mb-5">Take the first step towards unbreakable cyber defense. Get a free security assessment and consultation today.</p>
             <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 me-3">Contact Us Now</a>
-            <a href="tel:+92300XXXXXXX" class="btn btn-outline-light btn-lg px-5 py-3">Call 24/7 Emergency Line</a>
+            <a href="tel:+923493127225" class="btn btn-outline-light btn-lg px-5 py-3">Call 24/7: +92-349-3127225</a>
         </div>
     </section>
 
@@ -193,7 +209,7 @@
         <div class="container text-center">
             <img src="assets/images/logo.svg" alt="Nexiono" height="60" class="mb-4">
             <p class="mb-2">© 2025 Nexiono Cyber Security. All Rights Reserved.</p>
-            <p class="mb-0">info@nexiono.com | 24/7 Emergency Support Available</p>
+            <p class="mb-0">info@nexiono.com | 24/7 Emergency: +92-349-3127225</p>
         </div>
     </footer>
 
