@@ -3,43 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nexiono Cyber Security Blog - Latest insights, trends, and expert advice on ransomware, phishing, zero trust, and emerging threats.">
-    <title>Blog | Nexiono - Cyber Security Insights & News</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Read the latest insights on cyber security threats, best practices, ransomware prevention, and industry trends from Nexiono's expert team.">
+    <title>Blog | Nexiono Cyber Security</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        body { background: #0a192f; color: #e2e8f0; font-family: 'Roboto', sans-serif; }
-        .navbar { background: rgba(10, 25, 47, 0.95); backdrop-filter: blur(10px); }
+        body { background: #0a192f; color: #e2e8f0; font-family: 'Roboto', sans-serif; line-height: 1.7; }
+        .navbar { background: rgba(10, 25, 47, 0.95); backdrop-filter: blur(10px); transition: all 0.3s; }
+        .navbar.scrolled { background: rgba(10, 25, 47, 0.98); }
         .hero { 
             background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
-                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); 
-            background-size: cover; 
-            background-position: center;
-            height: 60vh; 
-            display: flex; 
-            align-items: center; 
+                        url('https://www.shutterstock.com/image-photo/cybersecurity-background-navy-blue-modern-600nw-2627410633.jpg') center/cover no-repeat; 
+            min-height: 80vh; display: flex; align-items: center; 
         }
-        .section { padding: 100px 0; }
-        .blog-card { 
-            background: #001e3c; 
-            border-radius: 15px; 
-            overflow: hidden; 
-            transition: transform 0.3s, box-shadow 0.3s; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        .urgent-bar { background: #dc2626; color: white; text-align: center; padding: 12px; font-weight: bold; font-size: 1.1rem; }
+        .urgent-bar a { color: white; text-decoration: underline; }
+        .section-dark { background: #001e3c; padding: 100px 0; }
+        .section-light { background: #0f172a; padding: 100px 0; }
+        .blog-card { background: #1e293b; border-radius: 15px; overflow: hidden; transition: all 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .blog-card:hover { transform: translateY(-10px); }
+        .blog-img { height: 250px; object-fit: cover; }
+        .blog-title { font-size: 1.5rem; font-weight: 700; }
+        .blog-meta { color: #94a3b8; font-size: 0.9rem; }
+        .contact-cta { background: linear-gradient(135deg, #1e3a8a, #3b82f6); padding: 100px 0; }
+        footer { background: #020617; padding: 70px 0 30px; }
+        .nav-link.btn { border-radius: 50px; font-weight: 500; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero .lead { font-size: 1.3rem; }
+            .section-dark, .section-light { padding: 80px 0; }
+            .blog-img { height: 200px; }
+            .blog-title { font-size: 1.3rem; }
         }
-        .blog-card:hover { 
-            transform: translateY(-10px); 
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3); 
-        }
-        .blog-card img { height: 280px; object-fit: cover; width: 100%; }
-        .sidebar-card { background: #001e3c; padding: 30px; border-radius: 15px; }
-        footer { background: #020617; padding: 60px 0 30px; }
-        .btn-outline-primary { border-color: #3b82f6; color: #3b82f6; }
-        .btn-outline-primary:hover { background: #3b82f6; color: white; }
     </style>
 </head>
 <body>
+
+    <!-- Urgent Help Bar -->
+    <div class="urgent-bar">
+        <i class="fas fa-exclamation-triangle"></i> Experiencing a security breach or suspicious activity? Call our 24/7 emergency team now: 
+        <a href="tel:+923493127225">+92-349-3127225</a>
+    </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -55,119 +63,135 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active fw-bold" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary px-4 py-2 ms-3" href="contact.html">Get Protected</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary px-4 py-2 ms-3" href="#contact">Get Protected</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section - Dark Hacker Vibe -->
+    <!-- Hero Section -->
     <section class="hero text-center text-white">
         <div class="container">
-            <h1 class="display-2 fw-bold mb-4">Nexiono Blog</h1>
-            <p class="lead fs-3">Expert insights on the latest cyber threats and defense strategies</p>
+            <h1 class="display-2 fw-bold mb-4">Nexiono Cyber Security Blog</h1>
+            <p class="lead fs-3 mb-5">Latest insights, threat reports, and expert advice on protecting your business</p>
         </div>
     </section>
 
     <!-- Blog Posts Section -->
-    <section class="section">
+    <section class="section-dark">
         <div class="container">
-            <div class="row">
-                <!-- Main Posts -->
-                <div class="col-lg-8">
-                    <div class="row g-4">
-
-                        <!-- Post 1: AI-Powered Ransomware -->
-                        <div class="col-12">
-                            <div class="blog-card text-white">
-                                <img src="https://images.unsplash.com/photo-1510511454127-2c3083aedea7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Hooded Hacker - AI Ransomware Threat">
-                                <div class="p-4">
-                                    <small class="text-primary">December 20, 2025</small>
-                                    <h3 class="fw-bold mt-2">The Rising Threat of AI-Powered Ransomware in 2025</h3>
-                                    <p>Ransomware groups are increasingly leveraging AI to make attacks more targeted and evasive. Learn about the latest trends and how Nexiono's MDR service stops them in their tracks.</p>
-                                    <a href="#" class="btn btn-outline-primary">Read More →</a>
-                                </div>
+            <div class="row g-5">
+                <!-- Post 1 -->
+                <div class="col-lg-6">
+                    <div class="blog-card h-100">
+                        <img src="https://www.kaspersky.com/content/en-global/images/repository/isc/2023/2023q2/ransomware-threats-1200x628-1.jpg" alt="Ransomware Attack Trends 2025" class="blog-img w-100">
+                        <div class="p-5">
+                            <div class="blog-meta mb-3">
+                                <i class="fas fa-calendar"></i> December 28, 2025 &nbsp; | &nbsp; <i class="fas fa-clock"></i> 5 min read
                             </div>
+                            <h3 class="blog-title mb-4">Ransomware in 2025: What Businesses Need to Know</h3>
+                            <p>Ransomware attacks have evolved dramatically, with double-extortion tactics and supply chain compromises becoming commonplace. Recent reports show a 30% increase in attacks targeting mid-sized businesses. Learn about the latest strains, common entry points, and proven strategies to prevent and recover from attacks.</p>
+                            <a href="#" class="text-primary fw-bold">Read More →</a>
                         </div>
-
-                        <!-- Post 2: Phishing Attacks -->
-                        <div class="col-12">
-                            <div class="blog-card text-white">
-                                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Phishing Hook Email Scam">
-                                <div class="p-4">
-                                    <small class="text-primary">December 15, 2025</small>
-                                    <h3 class="fw-bold mt-2">How Phishing Attacks Are Evolving – And How to Stay Safe</h3>
-                                    <p>From simple email scams to sophisticated multi-stage campaigns. Discover real-world examples and practical tips to protect your organization.</p>
-                                    <a href="#" class="btn btn-outline-primary">Read More →</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Post 3: Zero Trust -->
-                        <div class="col-12">
-                            <div class="blog-card text-white">
-                                <img src="https://images.unsplash.com/photo-1558494949-ef910a483faa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Zero Trust Network Architecture">
-                                <div class="p-4">
-                                    <small class="text-primary">December 10, 2025</small>
-                                    <h3 class="fw-bold mt-2">Implementing Zero Trust: A Practical Guide for 2025</h3>
-                                    <p>Zero Trust is no longer optional. Step-by-step implementation advice tailored for modern hybrid workforces.</p>
-                                    <a href="#" class="btn btn-outline-primary">Read More →</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Post 4: Incident Response -->
-                        <div class="col-12">
-                            <div class="blog-card text-white">
-                                <img src="https://images.unsplash.com/photo-1581093450021-4a66cb3a6a6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="SOC Incident Response Team">
-                                <div class="p-4">
-                                    <small class="text-primary">December 5, 2025</small>
-                                    <h3 class="fw-bold mt-2">Incident Response: Reducing Recovery Time by 80%</h3>
-                                    <p>Case study from our SOC: How rapid detection and response prevented major data loss for a client.</p>
-                                    <a href="#" class="btn btn-outline-primary">Read More →</a>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
-                <!-- Sidebar -->
-                <div class="col-lg-4">
-                    <div class="sidebar-card">
-                        <h4 class="fw-bold mb-4">Categories</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white text-decoration-none">Ransomware</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Phishing & Social Engineering</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Zero Trust</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Incident Response</a></li>
-                            <li><a href="#" class="text-white text-decoration-none">Compliance</a></li>
-                        </ul>
+                <!-- Post 2 -->
+                <div class="col-lg-6">
+                    <div class="blog-card h-100">
+                        <img src="https://www.cybersecuritydive.com/imgproxy/0jYf7e1u7e9u0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b/g:ce/rs:fill:770:364/aHR0cHM6Ly93d3cuY3liZXJzZWN1cml0eWRpdmUuY29tL25ld3MvY29udGVudC9pbWFnZXMvMjAyMy8wNy9zaHV0dGVyc3RvY2tfMTg3NzA4NzI0Ny5qcGc.jpg" alt="Phishing Email Example" class="blog-img w-100">
+                        <div class="p-5">
+                            <div class="blog-meta mb-3">
+                                <i class="fas fa-calendar"></i> December 20, 2025 &nbsp; | &nbsp; <i class="fas fa-clock"></i> 4 min read
+                            </div>
+                            <h3 class="blog-title mb-4">How AI is Changing Phishing Attacks</h3>
+                            <p>Artificial intelligence is making phishing emails more convincing than ever. Attackers now use AI tools to craft personalized messages with perfect grammar and context. We break down real examples and share practical tips to train your team to spot these sophisticated threats.</p>
+                            <a href="#" class="text-primary fw-bold">Read More →</a>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="sidebar-card mt-4">
-                        <h4 class="fw-bold mb-4">Recent Posts</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-3"><a href="#" class="text-white text-decoration-none">The Rising Threat of AI-Powered Ransomware</a></li>
-                            <li class="mb-3"><a href="#" class="text-white text-decoration-none">How Phishing Attacks Are Evolving</a></li>
-                            <li class="mb-3"><a href="#" class="text-white text-decoration-none">Zero Trust Implementation Guide</a></li>
-                        </ul>
+                <!-- Post 3 -->
+                <div class="col-lg-6">
+                    <div class="blog-card h-100">
+                        <img src="https://www.securitymagazine.com/ext/resources/SEC/2023/October/zero-trust.jpg?1696958737" alt="Zero Trust Architecture" class="blog-img w-100">
+                        <div class="p-5">
+                            <div class="blog-meta mb-3">
+                                <i class="fas fa-calendar"></i> December 15, 2025 &nbsp; | &nbsp; <i class="fas fa-clock"></i> 6 min read
+                            </div>
+                            <h3 class="blog-title mb-4">Implementing Zero Trust: A Practical Guide</h3>
+                            <p>Zero Trust is no longer optional. Learn how to move from traditional perimeter-based security to a modern zero-trust architecture. We cover key principles, implementation steps, and common pitfalls to avoid during your transition.</p>
+                            <a href="#" class="text-primary fw-bold">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="col-lg-6">
+                    <div class="blog-card h-100">
+                        <img src="https://www.crowdstrike.com/wp-content/uploads/2024/07/crowdstrike-global-threat-report-2024-hero.jpg" alt="Cyber Threat Report" class="blog-img w-100">
+                        <div class="p-5">
+                            <div class="blog-meta mb-3">
+                                <i class="fas fa-calendar"></i> December 10, 2025 &nbsp; | &nbsp; <i class="fas fa-clock"></i> 7 min read
+                            </div>
+                            <h3 class="blog-title mb-4">2025 Cyber Threat Landscape Report</h3>
+                            <p>Our annual analysis of the biggest threats facing organizations today. From nation-state actors to cybercrime syndicates, we examine emerging trends, attack techniques, and recommendations for building resilient defenses in the coming year.</p>
+                            <a href="#" class="text-primary fw-bold">Read More →</a>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-light btn-lg px-5 py-3">Load More Posts</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section id="contact" class="contact-cta text-center text-white">
+        <div class="container">
+            <h2 class="display-4 fw-bold mb-4">Stay Protected with Nexiono</h2>
+            <p class="lead fs-3 mb-5">Get expert cyber security protection tailored to your business needs.</p>
+            <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 me-3">Contact Us Today</a>
+            <a href="tel:+923493127225" class="btn btn-outline-light btn-lg px-5 py-3">Call 24/7: +92-349-3127225</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <img src="assets/images/logo.svg" alt="Nexiono" height="60" class="mb-3">
+            <img src="assets/images/logo.svg" alt="Nexiono" height="60" class="mb-4">
             <p class="mb-2">© 2025 Nexiono Cyber Security. All Rights Reserved.</p>
-            <p>info@nexiono.com | 24/7 Support</p>
+            <p class="mb-0">info@nexiono.com | 24/7 Emergency: +92-349-3127225</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
