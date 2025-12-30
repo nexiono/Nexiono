@@ -228,3 +228,38 @@ footer img {
     height: 60px;
     margin-bottom: 20px;
 }
+
+        body {
+            background: #0a192f;
+            color: #e2e8f0;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            padding-top: 140px; /* Ye add karo - urgent bar + navbar ki height cover karega */
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 120px; /* Mobile pe thoda kam padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding-top: 110px; /* Bohat choti screen pe adjust */
+            }
+        }
+
+        /* Urgent bar ko fixed bana do taake scroll pe bhi dikhe */
+        .urgent-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030; /* Navbar se upar (navbar ka z-index 1020 hota hai Bootstrap mein) */
+            background: #dc2626;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
