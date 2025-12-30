@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nexiono offers 24/7 managed cyber security services including threat detection, rapid incident response, penetration testing, and compliance solutions to safeguard businesses from advanced digital threats.">
+    <title>Nexiono | 24/7 Managed Cyber Security & Protection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { background: #0a192f; color: #e2e8f0; font-family: 'Roboto', sans-serif; line-height: 1.7; }
+        .navbar { background: rgba(10, 25, 47, 0.95); backdrop-filter: blur(10px); transition: all 0.3s; }
+        .navbar.scrolled { background: rgba(10, 25, 47, 0.98); }
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                        url('https://www.shutterstock.com/image-photo/cybersecurity-background-navy-blue-modern-600nw-2627410633.jpg') center/cover no-repeat; 
+            min-height: 100vh; display: flex; align-items: center; 
+        }
+        .urgent-bar { background: #dc2626; color: white; text-align: center; padding: 12px; font-weight: bold; font-size: 1.1rem; }
+        .urgent-bar a { color: white; text-decoration: underline; }
+        .section-dark { background: #001e3c; padding: 100px 0; }
+        .section-light { background: #0f172a; padding: 100px 0; }
+        .stat-card { background: #1e3a8a; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.3s; }
+        .stat-card:hover { transform: translateY(-10px); }
+        .why-card { background: #1e293b; padding: 35px; border-radius: 15px; height: 100%; transition: all 0.3s; border: 1px solid transparent; }
+        .why-card:hover { transform: translateY(-10px); border-color: #3b82f6; }
+        .testimonial-card { background: #1e293b; padding: 40px; border-radius: 15px; border-left: 6px solid #3b82f6; max-width: 900px; margin: 0 auto; }
+        .service-img { height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+        .intro-img { border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+        .contact-cta { background: linear-gradient(135deg, #1e3a8a, #3b82f6); padding: 100px 0; }
+        footer { background: #020617; padding: 70px 0 30px; }
+        .nav-link.btn { border-radius: 50px; font-weight: 500; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero .lead { font-size: 1.3rem; }
+            .section-dark, .section-light { padding: 80px 0; }
+            .service-img { height: 150px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Urgent Help Bar -->
+    <div class="urgent-bar">
+        <i class="fas fa-exclamation-triangle"></i> Experiencing a security breach or suspicious activity? Call our 24/7 emergency team now: 
+        <a href="tel:+923493127225">+92-349-3127225</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.svg" alt="Nexiono Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary px-4 py-2 ms-3" href="#contact">Get Protected</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-white">
+        <div class="container">
+            <h1 class="display-2 fw-bold mb-4">24/7 Managed Cyber Security Services</h1>
+            <p class="lead fs-3 mb-5">Proactively defend your business against evolving cyber threats with Nexiono's expert monitoring and rapid response team.</p>
+            <a href="#contact" class="btn btn-primary btn-lg px-5 py-3 me-3">Get Protected Today</a>
+            <a href="about.html" class="btn btn-outline-light btn-lg px-5 py-3">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">Next-Generation Cyber Defense for Modern Businesses</h2>
+                    <p class="lead">In an era where cyber attacks are increasing in both frequency and sophistication, businesses face unprecedented risks. Ransomware, phishing, advanced persistent threats (APTs), and supply chain attacks can disrupt operations, compromise sensitive data, and lead to massive financial losses.</p>
+                    <p>Nexiono delivers comprehensive, enterprise-grade managed cyber security services designed specifically for small to medium-sized businesses that need robust protection without the overhead of building an in-house security team.</p>
+                    <p>Our UK-based Security Operations Centre (SOC) runs 24/7/365, powered by state-of-the-art SIEM platforms, AI-driven threat intelligence, and a team of certified security experts. We combine automated detection with human analysis to identify threats early and respond instantly — often neutralizing attacks before you even know they occurred.</p>
+                    <p>From financial institutions and healthcare providers to e-commerce platforms and legal firms, we've helped hundreds of organizations strengthen their defenses and achieve compliance with standards like ISO 27001, GDPR, and PCI DSS.</p>
+                </div>
+                <div class="col-lg-6 text-center mb-5 mb-lg-0">
+                    <img src="https://www.obrela.com/wp-content/uploads/2024/07/What-is-a-SOC-in-cyber-security.jpg" alt="Security Operations Center Team Monitoring" class="img-fluid intro-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section-light">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">Our Core Cyber Security Services</h2>
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white border-0 h-100 shadow-lg">
+                        <img src="https://i0.wp.com/faisalyahya.com/wp-content/uploads/2024/08/b1d3a238-2ef8-42c8-9d0c-715da359157b.jpg?fit=1200%2C669&quality=89&ssl=1" alt="Managed Detection & Response" class="service-img w-100">
+                        <div class="card-body p-5 text-center">
+                            <h5 class="fw-bold fs-4">Managed Detection & Response (MDR)</h5>
+                            <p>Continuous threat hunting, endpoint monitoring, and instant incident response using next-gen EDR/XDR tools backed by expert analysts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white border-0 h-100 shadow-lg">
+                        <img src="https://cdn.sanity.io/images/a3jopls3/testdataset/e8fd87d233864a70f0bd206a5132f7cc67b12baa-1536x1024.jpg" alt="Penetration Testing & Vulnerability Management" class="service-img w-100">
+                        <div class="card-body p-5 text-center">
+                            <h5 class="fw-bold fs-4">Penetration Testing & Vulnerability Management</h5>
+                            <p>Ethical hacking simulations, detailed vulnerability assessments, and ongoing scanning with prioritized remediation roadmaps.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-white border-0 h-100 shadow-lg">
+                        <img src="https://blog.usecure.io/hs-fs/hubfs/7%20Key%20Steps%20to%20implement%20security%20awareness%20training_3.png?width=2280&name=7%20Key%20Steps%20to%20implement%20security%20awareness%20training_3.png" alt="Security Awareness Training" class="service-img w-100">
+                        <div class="card-body p-5 text-center">
+                            <h5 class="fw-bold fs-4">Security Awareness Training & Phishing Simulation</h5>
+                            <p>Interactive employee training programs and realistic phishing tests to build a human firewall within your organization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats & Why Choose Us -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="row text-center g-5 mb-5">
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <h3 class="display-4 fw-bold">250+</h3>
+                        <p class="mb-0">Clients Protected Worldwide</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <h3 class="display-4 fw-bold">24/7</h3>
+                        <p class="mb-0">Monitoring & Support</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <h3 class="display-4 fw-bold">&lt;15 min</h3>
+                        <p class="mb-0">Average Response Time</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <h3 class="display-4 fw-bold">99.9%</h3>
+                        <p class="mb-0">Threat Detection Rate</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-center display-5 fw-bold mb-5">Why Businesses Trust Nexiono</h2>
+            <div class="row g-5">
+                <div class="col-md-6"><div class="why-card"><strong>Proactive Threat Hunting</strong> – We actively search for hidden threats instead of waiting for alerts.</div></div>
+                <div class="col-md-6"><div class="why-card"><strong>Expert Analysts</strong> – Certified professionals with deep experience in incident response and forensics.</div></div>
+                <div class="col-md-6"><div class="why-card"><strong>Clear Reporting</strong> – Executive summaries, detailed logs, and real-time dashboards for full visibility.</div></div>
+                <div class="col-md-6"><div class="why-card"><strong>Affordable & Transparent Pricing</strong> – Fixed monthly fees with no hidden costs or long-term lock-ins.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="testimonial-card">
+                        <p class="fs-4 fst-italic">"Since partnering with Nexiono, we've had complete peace of mind knowing our systems are monitored around the clock. Their team detected and stopped a sophisticated ransomware attack within minutes — preventing what could have been a catastrophic breach costing millions. Professional, responsive, and truly expert. Highly recommended for any business serious about security."</p>
+                        <p class="text-end fw-bold mt-4 mb-0">— CEO, Leading Financial Services Firm</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/bltb898a7a2ab040cd5/64f17597e68ad322f75ab3a2/Cybersecurity_NicoElNino_Alamy.jpg?width=1280&auto=webp&quality=80&disable=upscale" alt="Client Success in Cyber Security" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section id="contact" class="contact-cta text-center text-white">
+        <div class="container">
+            <h2 class="display-4 fw-bold mb-4">Ready to Secure Your Business?</h2>
+            <p class="lead fs-3 mb-5">Take the first step towards unbreakable cyber defense. Get a free security assessment and consultation today.</p>
+            <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 me-3">Contact Us Now</a>
+            <a href="tel:+923493127225" class="btn btn-outline-light btn-lg px-5 py-3">Call 24/7: +92-349-3127225</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <img src="assets/images/logo.svg" alt="Nexiono" height="60" class="mb-4">
+            <p class="mb-2">© 2025 Nexiono Cyber Security. All Rights Reserved.</p>
+            <p class="mb-0">info@nexiono.com | 24/7 Emergency: +92-349-3127225</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navbar links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
