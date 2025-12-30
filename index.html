@@ -15,10 +15,13 @@
         body { background: #0a192f; color: #e2e8f0; font-family: 'Roboto', sans-serif; line-height: 1.7; }
         .navbar { background: rgba(10, 25, 47, 0.95); backdrop-filter: blur(10px); transition: all 0.3s; }
         .navbar.scrolled { background: rgba(10, 25, 47, 0.98); }
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
-                        url('https://www.shutterstock.com/image-photo/cybersecurity-background-navy-blue-modern-600nw-2627410633.jpg') center/cover no-repeat; 
-            min-height: 100vh; display: flex; align-items: center; 
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+                        url('https://www.shutterstock.com/image-photo/cybersecurity-background-navy-blue-modern-600nw-2627410633.jpg') center/cover no-repeat;
+            min-height: 100vh; display: flex; align-items: center;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
         }
         .urgent-bar { background: #dc2626; color: white; text-align: center; padding: 12px; font-weight: bold; font-size: 1.1rem; }
         .urgent-bar a { color: white; text-decoration: underline; }
@@ -29,25 +32,55 @@
         .why-card { background: #1e293b; padding: 35px; border-radius: 15px; height: 100%; transition: all 0.3s; border: 1px solid transparent; }
         .why-card:hover { transform: translateY(-10px); border-color: #3b82f6; }
         .testimonial-card { background: #1e293b; padding: 40px; border-radius: 15px; border-left: 6px solid #3b82f6; max-width: 900px; margin: 0 auto; }
-        .service-img { height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px; }
+        .service-img { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            object-position: center; 
+            border-radius: 10px; 
+            margin-bottom: 20px; 
+        }
         .intro-img { border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
         .contact-cta { background: linear-gradient(135deg, #1e3a8a, #3b82f6); padding: 100px 0; }
         footer { background: #020617; padding: 70px 0 30px; }
         .nav-link.btn { border-radius: 50px; font-weight: 500; }
+
+        /* Mobile Fixes */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .hero .lead { font-size: 1.3rem; }
             .section-dark, .section-light { padding: 80px 0; }
             .service-img { height: 150px; }
+            .stat-card, .why-card {
+                padding: 30px 20px !important;
+                margin-bottom: 20px;
+            }
+            .testimonial-card {
+                padding: 30px 20px;
+            }
+            .row.g-5 {
+                --bs-gutter-x: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero .lead { font-size: 1.1rem; }
+            .hero .btn-lg { padding: 12px 24px; font-size: 1rem; }
+        }
+
+        /* General overflow prevention */
+        img, .card, .stat-card, .why-card, .testimonial-card {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
-
-    
+   
     <!-- Urgent Help Bar -->
     <div class="urgent-bar">
-        <i class="fas fa-exclamation-triangle"></i> Experiencing a security breach or suspicious activity? Email our 24/7 Emergency Team Now: 
+        <i class="fas fa-exclamation-triangle"></i> Experiencing a security breach or suspicious activity? Email our 24/7 Emergency Team Now:
         <a href="mailto:operations@nexiono.com">operations@nexiono.com</a>
     </div>
 
@@ -67,7 +100,7 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-primary px-4 py-2 ms-3" href="#contact">Get Protected</a>
+                        <a class="nav-link btn btn-primary px-4 py-2 ms-3" href="contact.html">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -79,7 +112,7 @@
         <div class="container">
             <h1 class="display-2 fw-bold mb-4">24/7 Managed Cyber Security Services</h1>
             <p class="lead fs-3 mb-5">Proactively defend your business against evolving cyber threats with Nexiono's expert monitoring and rapid response team.</p>
-            <a href="#contact" class="btn btn-primary btn-lg px-5 py-3 me-3">Get Protected Today</a>
+            <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3 me-3">Contact Us Now</a>
             <a href="about.html" class="btn btn-outline-light btn-lg px-5 py-3">Learn More</a>
         </div>
     </section>
@@ -167,7 +200,6 @@
                     </div>
                 </div>
             </div>
-
             <h2 class="text-center display-5 fw-bold mb-5">Why Businesses Trust Nexiono</h2>
             <div class="row g-5">
                 <div class="col-md-6"><div class="why-card"><strong>Proactive Threat Hunting</strong> – We actively search for hidden threats instead of waiting for alerts.</div></div>
@@ -216,17 +248,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Smooth scrolling for navbar links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
         // Navbar background on scroll
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
