@@ -1,33 +1,65 @@
+/* ============================================= */
+/* Global Body & Spacing for Urgent Bar + Navbar */
 body {
     background: #0a192f;
     color: #e2e8f0;
     font-family: 'Roboto', sans-serif;
     line-height: 1.7;
-    padding-top: 140px; /* Urgent bar + navbar ke liye space */
+    padding-top: 130px;          /* Urgent bar (~50px) + navbar (~80px) ke liye space */
+    margin: 0;
 }
 
-.navbar {
-    background: rgba(10, 25, 47, 0.95);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s;
-    z-index: 1020; /* Urgent bar se neeche */
+/* Urgent / Emergency Bar - Sabse upar fixed + blinking */
+.urgent-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;                      /* Navbar se upar */
+    background-color: #dc3545;          /* Bootstrap danger red */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    animation: emergencyPulse 2.8s ease-in-out infinite;
 }
 
-.navbar {
-    margin-top: 45px;          /* urgent-bar ki height ke hisaab se adjust (padding 10px*2 + font-size) */
-    background-color: rgba(0,0,0,0.85) !important; /* thoda dark for contrast */
+.urgent-bar a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
 }
 
-@media (max-width: 576px) {
-    .navbar {
-        margin-top: 38px;      /* mobile pe thoda kam height */
+@keyframes emergencyPulse {
+    0%, 100% { opacity: 1; background-color: #dc3545; }
+    50%      { opacity: 0.65; background-color: #b91c1c; } /* Halka dim + darker red for visible blink */
+}
+
+/* Accessibility: Reduced motion users ke liye animation off */
+@media (prefers-reduced-motion: reduce) {
+    .urgent-bar {
+        animation: none !important;
     }
 }
 
-.navbar.scrolled {
-    background: rgba(10, 25, 47, 0.98);
+/* Navbar - Urgent bar ke neeche, glassmorphism style */
+.navbar {
+    margin-top: 50px;                   /* Urgent bar ki height adjust */
+    background: rgba(10, 25, 47, 0.92) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari ke liye */
+    transition: all 0.3s ease;
+    z-index: 1030;
 }
 
+.navbar.scrolled {
+    background: rgba(10, 25, 47, 0.98) !important;
+    backdrop-filter: blur(12px);
+}
+
+/* Hero Section */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
                 url('https://www.shutterstock.com/image-photo/cybersecurity-background-navy-blue-modern-600nw-2627410633.jpg') center/cover no-repeat;
@@ -39,25 +71,7 @@ body {
     background-attachment: fixed;
 }
 
-.urgent-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1030; /* Navbar se upar */
-    background: #dc2626;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.urgent-bar a {
-    color: white;
-    text-decoration: underline;
-}
-
+/* Sections */
 .section-dark {
     background: #001e3c;
     padding: 100px 0;
@@ -68,6 +82,7 @@ body {
     padding: 100px 0;
 }
 
+/* Cards & Stats */
 .stat-card {
     background: #1e3a8a;
     padding: 40px;
@@ -118,26 +133,35 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
+/* Contact CTA */
 .contact-cta {
     background: linear-gradient(135deg, #1e3a8a, #3b82f6);
     padding: 100px 0;
 }
 
+/* Footer */
 footer {
     background: #020617;
     padding: 70px 0 30px;
 }
 
+/* Nav Button Styling */
 .nav-link.btn {
     border-radius: 50px;
     font-weight: 500;
 }
 
-/* Mobile Responsive Fixes */
-@media (max-width: 768px) {
+/* Mobile Responsive Adjustments */
+@media (max-width: 992px) {
     body {
         padding-top: 120px;
     }
+    .navbar {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -169,7 +193,10 @@ footer {
 
 @media (max-width: 576px) {
     body {
-        padding-top: 110px;
+        padding-top: 105px;
+    }
+    .navbar {
+        margin-top: 38px;
     }
     .hero h1 {
         font-size: 2.2rem;
@@ -183,54 +210,16 @@ footer {
     }
     .urgent-bar {
         font-size: 0.9rem;
-        padding: 10px;
+        padding: 8px 12px;
         line-height: 1.5;
-    }
-}
-
-/* Prevent overflow/cutting */
-img, .card, .stat-card, .why-card, .testimonial-card {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Urgent / Emergency Bar - Logo ke upar fixed + blinking */
-.urgent-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #dc3545;          /* Bootstrap danger red */
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 1.1rem;
-    z-index: 2000;                      /* Navbar se upar (navbar z-index ~1030 hota hai) */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    animation: emergencyPulse 2.5s ease-in-out infinite;
-}
-
-/* Subtle pulse/blinking (opacity change – tez nahi, annoying nahi) */
-@keyframes emergencyPulse {
-    0%, 100% { opacity: 1; }
-    50%      { opacity: 0.75; }         /* Halka dim hota hai, full blink nahi */
-}
-
-/* Reduced motion support – accessibility ke liye important */
-@media (prefers-reduced-motion: reduce) {
-    .urgent-bar {
-        animation: none !important;
-    }
-}
-
-/* Small screens pe text chhota aur center */
-@media (max-width: 576px) {
-    .urgent-bar {
-        font-size: 0.95rem;
-        padding: 8px 0;
     }
     .urgent-bar .d-none {
         display: inline !important;     /* Mobile pe full text dikhao */
     }
+}
+
+/* Prevent overflow & image issues */
+img, .card, .stat-card, .why-card, .testimonial-card {
+    max-width: 100%;
+    height: auto;
 }
