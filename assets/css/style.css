@@ -13,6 +13,17 @@ body {
     z-index: 1020; /* Urgent bar se neeche */
 }
 
+.navbar {
+    margin-top: 45px;          /* urgent-bar ki height ke hisaab se adjust (padding 10px*2 + font-size) */
+    background-color: rgba(0,0,0,0.85) !important; /* thoda dark for contrast */
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        margin-top: 38px;      /* mobile pe thoda kam height */
+    }
+}
+
 .navbar.scrolled {
     background: rgba(10, 25, 47, 0.98);
 }
@@ -181,4 +192,45 @@ footer {
 img, .card, .stat-card, .why-card, .testimonial-card {
     max-width: 100%;
     height: auto;
+}
+
+/* Urgent / Emergency Bar - Logo ke upar fixed + blinking */
+.urgent-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #dc3545;          /* Bootstrap danger red */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    z-index: 2000;                      /* Navbar se upar (navbar z-index ~1030 hota hai) */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    animation: emergencyPulse 2.5s ease-in-out infinite;
+}
+
+/* Subtle pulse/blinking (opacity change – tez nahi, annoying nahi) */
+@keyframes emergencyPulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.75; }         /* Halka dim hota hai, full blink nahi */
+}
+
+/* Reduced motion support – accessibility ke liye important */
+@media (prefers-reduced-motion: reduce) {
+    .urgent-bar {
+        animation: none !important;
+    }
+}
+
+/* Small screens pe text chhota aur center */
+@media (max-width: 576px) {
+    .urgent-bar {
+        font-size: 0.95rem;
+        padding: 8px 0;
+    }
+    .urgent-bar .d-none {
+        display: inline !important;     /* Mobile pe full text dikhao */
+    }
 }
